@@ -38,6 +38,7 @@ class Actor(models.Model):
     def full_name(self):
         return f"{self.first_name} {self.last_name}"
 
+
 def movie_image_path(movie: "Movie", filename: str) -> str:
     ext = pathlib.Path(filename).suffix
     unique_id = uuid.uuid4()
